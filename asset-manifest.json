@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/smart-detailing/static/css/main.f855e6bc.css",
+    "main.js": "/smart-detailing/static/js/main.4e02546d.js",
+    "static/js/453.62b996a1.chunk.js": "/smart-detailing/static/js/453.62b996a1.chunk.js",
+    "static/media/logo.svg": "/smart-detailing/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/smart-detailing/index.html",
+    "main.f855e6bc.css.map": "/smart-detailing/static/css/main.f855e6bc.css.map",
+    "main.4e02546d.js.map": "/smart-detailing/static/js/main.4e02546d.js.map",
+    "453.62b996a1.chunk.js.map": "/smart-detailing/static/js/453.62b996a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.4e02546d.js"
+  ]
+}
