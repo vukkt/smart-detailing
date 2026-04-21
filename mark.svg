@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <path d="M24 2 L44 8 L44 28 C44 37 35 43 24 47 C13 43 4 37 4 28 L4 8 Z" fill="#0A0C0F" stroke="#E3A408" stroke-width="2"></path>
+  <text x="24" y="31" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" fill="#E3A408" letter-spacing="-0.5">SD</text>
+</svg>
