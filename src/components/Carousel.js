@@ -1,5 +1,5 @@
 import React from 'react'
-import { ZoomIn, ArrowLeft, ArrowRight } from './Icon'
+import { ArrowLeft, ArrowRight } from './Icon'
 
 const SLIDES = [
   { id: 1, img: 'car1.jpg', label: 'Century GRMN', tag: 'Ceramic · 9H' },
@@ -11,36 +11,14 @@ const SLIDES = [
 ]
 
 function CarouselSlide({ slide, index }) {
-  const ref = React.useRef(null)
-  const imgRef = React.useRef(null)
-  const [hovering, setHovering] = React.useState(false)
-
-  function onMove(e) {
-    if (!imgRef.current || !ref.current) return
-    const rect = ref.current.getBoundingClientRect()
-    const px = ((e.clientX - rect.left) / rect.width) * 100
-    const py = ((e.clientY - rect.top) / rect.height) * 100
-    imgRef.current.style.transformOrigin = `${px}% ${py}%`
-  }
-
   return (
-    <div
-      ref={ref}
-      className={'carousel-slide' + (hovering ? ' magnify' : '')}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      onMouseMove={onMove}
-    >
+    <div className="carousel-slide">
       <div
-        ref={imgRef}
         className="zoom-img"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/images/${slide.img})`,
         }}
       />
-      <div className="zoom-hint">
-        <ZoomIn width="11" height="11" /> Magnify
-      </div>
       <div className="caption">
         <div className="label">{slide.label}</div>
         <div className="num">

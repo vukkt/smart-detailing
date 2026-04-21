@@ -355,7 +355,6 @@ body {
   border-radius: var(--sd-radius-md);
   overflow: hidden;
   scroll-snap-align: start;
-  cursor: zoom-in;
   background-color: var(--sd-surface);
 }
 .carousel-slide .zoom-img {
