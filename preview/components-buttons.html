@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--sd-bg);}
+  .card{padding:28px 32px;box-sizing:border-box;}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn{font-family:var(--sd-font-sans);font-weight:600;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 24px;border:none;cursor:pointer;transition:all 220ms cubic-bezier(0.22,1,0.36,1);border-radius:2px;}
+  .btn-primary{background:#E3A408;color:#0A0C0F;}
+  .btn-primary:hover{background:#F2B829;box-shadow:0 12px 30px rgba(227,164,8,0.25);}
+  .btn-ghost{background:transparent;color:#E8EAEE;border:1px solid #3A414C;}
+  .btn-ghost:hover{border-color:#E3A408;color:#E3A408;}
+  .btn-link{background:transparent;color:#E3A408;padding:14px 4px;border-bottom:1px solid #E3A408;border-radius:0;}
+  h3.title{font-family:var(--sd-font-sans);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--sd-fg-subtle);margin:0 0 16px;font-weight:600;}
+</style></head><body class="sd-root"><div class="card">
+<h3 class="title">Buttons · Three tiers</h3>
+<div class="row">
+  <button class="btn btn-primary">Book a Detail</button>
+  <button class="btn btn-ghost">View Services</button>
+  <button class="btn btn-link">See Gallery →</button>
+</div>
+<div style="font-family:var(--sd-font-sans);font-size:11px;color:var(--sd-fg-subtle);margin-top:16px;line-height:1.6;">
+  <b style="color:#E8EAEE">Primary</b> for one action per view · <b style="color:#E8EAEE">Ghost</b> for secondary · <b style="color:#E8EAEE">Link</b> for tertiary / inline.
+</div>
+</div></body></html>
