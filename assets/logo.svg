@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" width="240" height="64">
+  
+  <g transform="translate(8, 10)">
+    <path d="M22 0 L44 6 L44 28 C44 36 35 42 22 46 C9 42 0 36 0 28 L0 6 Z" fill="none" stroke="#E3A408" stroke-width="2"></path>
+    <path d="M22 8 L36 12 L36 26 C36 31 30 35 22 37 C14 35 8 31 8 26 L8 12 Z" fill="#E3A408" opacity="0.08"></path>
+    <text x="22" y="28" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" fill="#E3A408" letter-spacing="-0.5">SD</text>
+  </g>
+  
+  <g transform="translate(66, 0)">
+    <text x="0" y="28" font-family="Anton, Impact, sans-serif" font-size="26" fill="#E8EAEE" letter-spacing="1.5">SMART</text>
+    <text x="0" y="52" font-family="Anton, Impact, sans-serif" font-size="26" fill="#E3A408" letter-spacing="1.5">DETAILING</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0;background:var(--sd-bg);}
+  .card{padding:28px 32px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  h3.title{font-family:var(--sd-font-sans);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--sd-fg-subtle);margin:0 0 10px;font-weight:600;grid-column:1/-1;}
+  label{display:flex;flex-direction:column;gap:8px;}
+  .lab{font-family:var(--sd-font-sans);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--sd-fg-subtle);}
+  .field{background:#111418;border:1px solid #262B33;color:#E8EAEE;padding:12px 14px;font-family:var(--sd-font-sans);font-size:14px;border-radius:2px;outline:none;transition:border-color 220ms;}
+  .field:focus{border-color:#E3A408;}
+  textarea.field{resize:vertical;min-height:60px;}
+</style></head><body class="sd-root"><div class="card">
+<h3 class="title">Form Inputs</h3>
+<label><span class="lab">Full Name</span><input class="field" value="Alex Morrison"></label>
+<label><span class="lab">Vehicle</span><input class="field" placeholder="2023 Audi RS6"></label>
+<label style="grid-column:1/-1;"><span class="lab">Tell us about the job</span><textarea class="field">Needs a full paint correction &amp; ceramic. Daily driver, garaged.</textarea></label>
+</div></body></html>
