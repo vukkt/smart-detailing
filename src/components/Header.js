@@ -9,6 +9,13 @@ const links = [
 ]
 
 export default function Header({ active = 'gallery', onNav }) {
+  const [menuOpen, setMenuOpen] = React.useState(false)
+
+  function handleNav(id) {
+    setMenuOpen(false)
+    onNav && onNav(id)
+  }
+
   return (
     <header className="site-header">
       <div className="container">
@@ -36,7 +43,7 @@ export default function Header({ active = 'gallery', onNav }) {
             href="#home"
             onClick={(e) => {
               e.preventDefault()
-              onNav && onNav('home')
+              handleNav('home')
             }}
           >
             <img src={`${process.env.PUBLIC_URL}/mark.svg`} alt="" />
@@ -52,7 +59,7 @@ export default function Header({ active = 'gallery', onNav }) {
                 className={active === l.id ? 'active' : ''}
                 onClick={(e) => {
                   e.preventDefault()
-                  onNav && onNav(l.id)
+                  handleNav(l.id)
                 }}
               >
                 {l.label}
@@ -61,16 +68,52 @@ export default function Header({ active = 'gallery', onNav }) {
           </nav>
           <a
             href="#contact"
-            className="btn btn-primary"
+            className="btn btn-primary desktop-cta"
             onClick={(e) => {
               e.preventDefault()
-              onNav && onNav('contact')
+              handleNav('contact')
             }}
           >
             Book a Detail
           </a>
+          <button
+            className={'hamburger' + (menuOpen ? ' open' : '')}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
       </div>
+      {menuOpen && (
+        <nav className="mobile-nav">
+          {links.map((l) => (
+            <a
+              key={l.id}
+              href={`#${l.id}`}
+              className={active === l.id ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault()
+                handleNav(l.id)
+              }}
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="btn btn-primary mobile-nav-cta"
+            onClick={(e) => {
+              e.preventDefault()
+              handleNav('contact')
+            }}
+          >
+            Book a Detail
+          </a>
+        </nav>
+      )}
     </header>
   )
 }
