@@ -1,8 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import App from './App'
 
-test('renders tagline', () => {
+test('renders the hero tagline', () => {
   render(<App />)
-  const tagline = screen.getByText(/your vehicle deserves the best care/i)
-  expect(tagline).toBeInTheDocument()
+  expect(screen.getByText(/precision auto detailing/i)).toBeInTheDocument()
 })

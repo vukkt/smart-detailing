@@ -1,28 +1,39 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 
-import { Gallery } from './components/Gallery'
-import ContactForm from './components/ContactForm'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import Stats from './components/Stats'
+import Carousel from './components/Carousel'
+import Services from './components/Services'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
+  const [active, setActive] = React.useState('gallery')
+
+  function handleNav(id) {
+    setActive(id)
+    if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
-    <div className="App container">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Your vehicle deserves the best care.</p>
-        <a className="App-link" href="#contact" rel="noopener noreferrer">
-          Get a Quote Today!
-        </a>
-      </header>
-
-      <Gallery />
-
-      <section id="contact">
-        <h2>Get in Touch</h2>
-        <ContactForm />
-      </section>
-    </div>
+    <>
+      <Header active={active} onNav={handleNav} />
+      <main>
+        <Hero onCTA={handleNav} />
+        <Stats />
+        <Carousel />
+        <Services onCTA={handleNav} />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 
