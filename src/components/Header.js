@@ -33,7 +33,7 @@ export default function Header({ active = 'gallery', onNav }) {
         <div className="header-main">
           <a
             className="logo"
-            href="#"
+            href="#home"
             onClick={(e) => {
               e.preventDefault()
               onNav && onNav('home')

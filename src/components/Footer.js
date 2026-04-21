@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <a className="logo" href="#">
+            <a className="logo" href="#home">
               <img src={`${process.env.PUBLIC_URL}/mark.svg`} alt="" />
               <span className="logo-text">
                 Smart<em> Detailing</em>
@@ -22,16 +22,16 @@ export default function Footer() {
             <h5>Services</h5>
             <ul>
               <li>
-                <a href="#">Ceramic Coat</a>
+                <a href="#services">Ceramic Coat</a>
               </li>
               <li>
-                <a href="#">Paint Correction</a>
+                <a href="#services">Paint Correction</a>
               </li>
               <li>
-                <a href="#">Deep Interior</a>
+                <a href="#services">Deep Interior</a>
               </li>
               <li>
-                <a href="#">PPF Front End</a>
+                <a href="#services">PPF Front End</a>
               </li>
             </ul>
           </div>
@@ -39,16 +39,16 @@ export default function Footer() {
             <h5>Studio</h5>
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="#contact">About</a>
               </li>
               <li>
-                <a href="#">Gallery</a>
+                <a href="#gallery">Gallery</a>
               </li>
               <li>
-                <a href="#">Reviews</a>
+                <a href="#contact">Reviews</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -56,7 +56,11 @@ export default function Footer() {
             <h5>Follow</h5>
             <ul>
               <li>
-                <a href="#">
+                <a
+                  href="https://instagram.com/smartdetailing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Instagram
                     width="14"
                     height="14"
@@ -66,10 +70,16 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#">YouTube</a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YouTube
+                </a>
               </li>
               <li>
-                <a href="#">Google Reviews</a>
+                <a href="#contact">Google Reviews</a>
               </li>
             </ul>
           </div>
